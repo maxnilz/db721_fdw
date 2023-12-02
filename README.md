@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> Thanks to the CMU Database Group for making these awesome public courses.
+> Thanks to the [CMU Database Group](https://db.cs.cmu.edu/) for making these awesome public courses.
 
 ## background
 
@@ -7,7 +7,7 @@ This is an implementation of [CMU 15-721 SPRING 2023 project 1](https://15721.co
 The code here is the `cmudb/extensions/db721_fdw` dir of this [repo](https://github.com/cmu-db/postgres/tree/2023-S721-P1)
 
 > [!NOTE]
-> At the year of 2023, I'm putting this code here as my reference, if the course of [CMU-15721](https://15721.courses.cs.cmu.edu/spring2024/) in the coming year continues using this same project, I will remove this repo to avoid any inconvenient.
+> At the year of 2023, I'm putting this code here as my reference, if the course of [CMU-15721](https://15721.courses.cs.cmu.edu/spring2024/) in the coming year continues using this same project, I will remove this repo immediately to avoid any inconvenient.
 
 
 ## db721 format
@@ -20,7 +20,7 @@ db721 is our custom columnar file format. Each table is stored with its metadata
 
 To read this format, first you read the last 4 bytes to figure out how big the JSON metadata is. Then, you read the JSON metadata, which describes how to access the raw data:
 
-```json
+```
 metadata["Table"]: the table name (string)
 
 metadata["Max Values Per Block"]: the maximum number of values in each block (int)
